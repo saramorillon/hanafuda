@@ -1,0 +1,53 @@
+name: Boilerplate
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  back:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install
+        run: yarn install
+        working-directory: back
+
+      - name: Build
+        run: yarn build
+        working-directory: back
+
+      - name: Test
+        run: yarn vitest run
+        working-directory: back
+
+  front:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install
+        run: yarn install
+        working-directory: front
+
+      - name: Build
+        run: yarn build
+        working-directory: front
+
+      - name: Test
+        run: yarn vitest run
+        working-directory: front

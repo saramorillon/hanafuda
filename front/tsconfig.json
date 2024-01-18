@@ -1,0 +1,13 @@
+{
+  "include": ["src", "tests", "vite.config.ts", "vitest.config.ts"],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "outDir": "dist",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "strict": true,
+    "types": ["vitest/globals"]
+  }
+}

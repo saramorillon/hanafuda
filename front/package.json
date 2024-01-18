@@ -1,0 +1,35 @@
+{
+  "name": "front",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "tsc -p tsconfig.build.json",
+    "build": "vite build",
+    "watch": "vite dev",
+    "check": "biome check --apply ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.2",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^20.11.5",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.2.1",
+    "dotenv": "^16.3.1",
+    "jsdom": "^23.2.0",
+    "mockdate": "^3.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vitest": "^1.2.1"
+  },
+  "dependencies": {
+    "@saramorillon/hooks": "^2.12.1",
+    "@tabler/icons-react": "^2.46.0",
+    "axios": "^1.6.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2"
+  }
+}
