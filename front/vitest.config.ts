@@ -14,7 +14,7 @@ export default defineConfig({
     include: ['tests/**/*.test.ts*'],
     setupFiles: ['tests/setup.tsx'],
     coverage: {
-      exclude: ['src/models', 'src/index.tsx', 'src/views/App.tsx'],
+      exclude: ['src/models', 'src/index.tsx', 'src/views/App.tsx', 'tests/mocks.ts'],
     },
   },
 })

@@ -1,4 +1,3 @@
-import { User } from '@prisma/client'
 import { Logger } from '@saramorillon/logger'
 
 declare global {
@@ -6,11 +5,5 @@ declare global {
     interface Request {
       logger: Logger
     }
-  }
-}
-
-declare module 'express-session' {
-  interface SessionData {
-    user: Pick<User, 'username'>
   }
 }

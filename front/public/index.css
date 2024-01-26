@@ -1,6 +1,25 @@
-.icon {
+:root {
+  --font-face: Quicksand, sans-serif;
+}
+
+.tabler-icon {
   vertical-align: middle;
   margin-top: -0.25em;
   width: 20px;
   height: 20px;
+}
+
+.courgette {
+  font-family: 'Courgette';
+  font-size: 1.2em;
+}
+
+.pink {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(300deg);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
 }

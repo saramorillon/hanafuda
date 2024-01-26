@@ -6,7 +6,10 @@ import { wait } from '../../../mocks'
 function children(data: string, refresh: () => void) {
   return (
     <>
-      {data} <button onClick={refresh}>Refresh</button>
+      {data}
+      <button type="button" onClick={refresh}>
+        Refresh
+      </button>
     </>
   )
 }
@@ -22,7 +25,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     expect(screen.getByText('Loading data')).toBeInTheDocument()
     await wait()
@@ -38,7 +41,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     expect(screen.getByText('Data error')).toBeInTheDocument()
@@ -54,7 +57,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     expect(screen.getByText('Data not found')).toBeInTheDocument()
@@ -70,7 +73,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     fireEvent.click(screen.getByText('Refresh'))
@@ -88,7 +91,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     fireEvent.click(screen.getByText('Refresh'))
@@ -106,7 +109,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     expect(screen.queryByText('Loading data')).not.toBeInTheDocument()
@@ -122,7 +125,7 @@ describe('FetchContainer', () => {
         notFoundMessage="Data not found"
       >
         {children}
-      </FetchContainer>,
+      </FetchContainer>
     )
     await wait()
     fireEvent.click(screen.getByText('Refresh'))

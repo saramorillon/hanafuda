@@ -1,6 +1,6 @@
 import { useFetch } from '@saramorillon/hooks'
 import React from 'react'
-import { Error, Loading, NotFound } from './Helpers'
+import { ErrorMessage, Loading, NotFound } from './Helpers'
 
 interface IFetchContainerProps<T> {
   fetchFn: () => Promise<T>
@@ -33,7 +33,7 @@ export function FetchContainer<T>({
   if (error) {
     return (
       <div className="center">
-        <Error message={errorMessage} />
+        <ErrorMessage message={errorMessage} />
       </div>
     )
   }

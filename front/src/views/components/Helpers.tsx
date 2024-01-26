@@ -17,7 +17,7 @@ export function NotFound({ message }: { message: string }): JSX.Element {
   )
 }
 
-export function Error({ message }: { message: string }): JSX.Element {
+export function ErrorMessage({ message }: { message: string }): JSX.Element {
   return (
     <>
       <IconX color="crimson" /> {message}

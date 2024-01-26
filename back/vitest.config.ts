@@ -13,7 +13,7 @@ export default defineConfig({
     include: ['tests/**/*.test.ts'],
     setupFiles: ['tests/setup.ts'],
     coverage: {
-      exclude: ['prisma', 'src/types'],
+      exclude: ['src/types', 'tests/mocks.ts'],
     },
   },
 })

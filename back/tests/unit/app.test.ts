@@ -1,7 +1,6 @@
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import express, { Express, static as _static, json, urlencoded } from 'express'
-import session from 'express-session'
 import helmet from 'helmet'
 import { App } from '../../src/app'
 import { render } from '../../src/controllers/render'
@@ -12,7 +11,6 @@ import { mockAction } from '../mocks'
 vi.mock('express')
 vi.mock('cookie-parser')
 vi.mock('cors')
-vi.mock('express-session')
 vi.mock('helmet')
 vi.mock('../../src/routes')
 
@@ -32,7 +30,6 @@ describe('run', () => {
     vi.mocked(json).mockReturnValue('json' as never)
     vi.mocked(urlencoded).mockReturnValue('urlencoded' as never)
     vi.mocked(cors).mockReturnValue('cors' as never)
-    vi.mocked(session).mockReturnValue('session' as never)
     vi.mocked(helmet).mockReturnValue('helmet' as never)
     vi.mocked(routes).mockReturnValue('routes' as never)
   })
@@ -55,7 +52,6 @@ describe('run', () => {
       ['json'],
       ['urlencoded'],
       ['cors'],
-      ['session'],
       [logger],
       ['helmet'],
       ['/api', 'routes'],
@@ -72,7 +68,7 @@ describe('run', () => {
 
   it('should log when app succesfully starts', async () => {
     const app = new App()
-    const { success } = mockAction(app['logger'])
+    const { success } = mockAction(app.logger)
     await app.run()
     expect(success).toHaveBeenCalled()
   })
@@ -82,7 +78,7 @@ describe('run', () => {
       throw 'error'
     })
     const app = new App()
-    const { failure } = mockAction(app['logger'])
+    const { failure } = mockAction(app.logger)
     await app.run()
     expect(failure).toHaveBeenCalledWith('error')
   })

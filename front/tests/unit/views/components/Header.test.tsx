@@ -5,7 +5,7 @@ import { Header } from '../../../../src/views/components/Header'
 describe('Header', () => {
   it('should render brand and logo', () => {
     render(<Header />)
-    expect(screen.getByRole('link', { name: 'Boilerplate' })).toHaveAttribute('href', '/')
+    expect(screen.getByRole('link', { name: 'Hanafuda' })).toHaveAttribute('href', '/')
     expect(screen.queryByRole('img')).toHaveAttribute('src', '/favicon.svg')
   })
 })
