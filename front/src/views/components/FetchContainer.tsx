@@ -18,7 +18,7 @@ export function FetchContainer<T>({
   loadingMessage,
   errorMessage,
   notFoundMessage,
-}: IFetchContainerProps<T>): JSX.Element {
+}: IFetchContainerProps<T>) {
   const result = useFetch(fetchFn, defaultValue)
   const [data, { loading, error }, refresh] = result
 

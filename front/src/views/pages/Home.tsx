@@ -1,13 +1,13 @@
 import React from 'react'
 import months from '../../../../cards.json'
 
-export function Home(): JSX.Element {
+export function Home() {
   return (
     <>
       <header className="center">
         <h1>
-          <img alt="" src="/favicon.svg" height={32} className="pink" />{' '}
-          <span className="courgette">Hanafuda Cards</span>
+          <img alt="" src="/favicon.svg" height={32} className="pink" /> <span className="courgette">Hanafuda</span>{' '}
+          <small>[花札]</small>
         </h1>
         <p>Discover the beauty of a traditional japanese card game</p>
       </header>
@@ -61,7 +61,7 @@ export function Home(): JSX.Element {
         <section>
           <div className="cards-grid">
             {months.map((month) => (
-              <article style={{ flex: 1 }}>
+              <article key={month.name} style={{ flex: 1 }}>
                 <h4 className="center mb2">
                   {month.flower}
                   <br />
@@ -69,7 +69,7 @@ export function Home(): JSX.Element {
                 </h4>
                 <div>
                   {month.cards.map((card) => (
-                    <div className="flex">
+                    <div key={card.alt} className="flex">
                       <a href={card.href} target="_blank" rel="noreferrer">
                         <img alt={card.alt} src={card.src} height={100} className="mr2" />
                       </a>

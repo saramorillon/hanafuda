@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Gokō [五光]",
+    "points": 10,
+    "cards": [{ "quantity": 4, "tag": "light" }, { "quantity": 1, "tag": "ono_no_michigaze" }]
+  },
+  {
+    "name": "Shikō [四光]",
+    "points": 8,
+    "cards": [{ "quantity": 3, "tag": "light" }, { "quantity": 0, "tag": "ono_no_michigaze" }]
+  },
+  {
+    "name": "Ame-Shikō [雨四光]",
+    "points": 7,
+    "cards": [{ "quantity": 3, "tag": "light" }, { "quantity": 1, "tag": "ono_no_michigaze" }]
+  },
+  {
+    "name": "Sankō [三光]",
+    "points": 6,
+    "cards": [{ "quantity": 3, "tag": "light" }, { "quantity": 0, "tag": "ono_no_michigaze" }]
+  },
+  {
+    "name": "Tsukimi-zake [月見酒]",
+    "points": 5,
+    "cards": [{ "quantity": 1, "tag": "full_moon" }, { "quantity": 1, "tag": "sake" }]
+  },
+  {
+    "name": "Hanami-zake [花見酒]",
+    "points": 5,
+    "cards": [{ "quantity": 1, "tag": "curtain" }, { "quantity": 1, "tag": "sake" }]
+  },
+  {
+    "name": "Inoshikachô [猪鹿蝶]",
+    "points": 5,
+    "cards": [
+      { "quantity": 1, "tag": "boar" },
+      { "quantity": 1, "tag": "deer" },
+      { "quantity": 1, "tag": "butterfly" }
+    ],
+    "+": "animal"
+  },
+  {
+    "name": "Tane [タネ]",
+    "points": 1,
+    "cards": [{ "quantity": 5, "tag": "animal" }],
+    "+": "animal"
+  },
+  {
+    "name": "Akatan, Aotan no Chōfuku [赤短・青短の重複]",
+    "points": 10,
+    "cards": [{ "quantity": 3, "tag": "poetry" }, { "quantity": 3, "tag": "blue" }],
+    "+": "ribbon"
+  },
+  {
+    "name": "Akatan [赤タン]",
+    "points": 5,
+    "cards": [{ "quantity": 3, "tag": "poetry" }],
+    "+": "ribbon"
+  },
+  {
+    "name": "Aotan [青タン]",
+    "points": 5,
+    "cards": [{ "quantity": 3, "tag": "blue" }],
+    "+": "ribbon"
+  },
+  {
+    "name": "Tan [タン]",
+    "points": 1,
+    "cards": [{ "quantity": 5, "tag": "ribbon" }],
+    "+": "ribbon"
+  },
+  {
+    "name": "Kasu [カス]",
+    "points": 1,
+    "cards": [{ "quantity": 10, "tag": "plain" }],
+    "+": "plain"
+  }
+]

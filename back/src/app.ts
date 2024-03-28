@@ -3,7 +3,10 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import express, { static as _static, json, urlencoded } from 'express'
 import helmet from 'helmet'
+import { createServer } from 'http'
+import { Server } from 'socket.io'
 import { render } from './controllers/render'
+import { room } from './controllers/room'
 import { logger } from './middlewares/logger'
 import { routes } from './routes'
 import { settings } from './settings'
@@ -24,7 +27,9 @@ export class App {
       app.use(helmet(settings.helmet))
       app.use('/api', routes())
       app.get('*', render)
-      await new Promise<void>((resolve) => app.listen(settings.app.port, resolve))
+      const http = createServer(app)
+      new Server(http).of(/^\/.+$/).on('connection', room)
+      await new Promise<void>((resolve) => http.listen(settings.app.port, resolve))
       success()
     } catch (error) {
       failure(error)

@@ -3,7 +3,7 @@ import { IconBrandGithub, IconWorld } from '@tabler/icons-react'
 import React from 'react'
 import { getApp } from '../../services/app'
 
-export function Footer(): JSX.Element | null {
+export function Footer() {
   const [app] = useFetch(getApp, null)
 
   if (!app) return null
